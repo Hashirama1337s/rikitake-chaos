@@ -1,0 +1,213 @@
+Cloning into '~/rk_repro/_capd'...
+Note: switching to '03dc5628203334b214bb7d9fd63788a175521005'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by switching back to a branch.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -c with the switch command. Example:
+
+  git switch -c <new-branch-name>
+
+Or undo this operation with:
+
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false
+
+HEAD is now at 03dc562 corrected split function in intervals
+-- The C compiler identification is GNU 13.3.0
+-- The CXX compiler identification is GNU 13.3.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- CMake version: 3.31.10
+-- CAPD version : 6.1.0
+-- Build CAPD tests    : OFF
+-- Build CAPD examples : OFF
+-- CAPD multiprecision : OFF
+-- CAPD interval type  : FILIB
+-- Processor arch: 64-bit x86 (SSE)
+-- Configuring done (4.8s)
+-- Generating done (0.1s)
+-- Build files have been written to: ~/rk_repro/_capd/build
+make: Entering directory '~/rk_repro/_capd/build'
+make[1]: Entering directory '~/rk_repro/_capd/build'
+make[2]: Entering directory '~/rk_repro/_capd/build'
+make[2]: Leaving directory '~/rk_repro/_capd/build'
+make[2]: Entering directory '~/rk_repro/_capd/build'
+[  2%] Building CXX object capdExt/filibsrc/CMakeFiles/filib.dir/ieee/primitive.cpp.o
+[  2%] Building CXX object capdExt/filibsrc/CMakeFiles/filib.dir/interval/stdfun/filib_consts.cpp.o
+[  3%] Building CXX object capdExt/filibsrc/CMakeFiles/filib.dir/fp_traits/fp_traits_double_setup.cpp.o
+[  4%] Building CXX object capdExt/filibsrc/CMakeFiles/filib.dir/fp_traits/fp_traits_base_double_setup.cpp.o
+[  5%] Building CXX object capdExt/filibsrc/CMakeFiles/filib.dir/fp_traits/fp_traits_float_setup.cpp.o
+[  6%] Building CXX object capdExt/filibsrc/CMakeFiles/filib.dir/fp_traits/fp_traits_base_float_setup.cpp.o
+[  7%] Building CXX object capdExt/filibsrc/CMakeFiles/filib.dir/fp_traits/fp_traits_sse_const.cpp.o
+[  8%] Building CXX object capdExt/filibsrc/CMakeFiles/filib.dir/fp_traits/fp_traits_x87_const.cpp.o
+[  9%] Linking CXX static library libfilib.a
+make[2]: Leaving directory '~/rk_repro/_capd/build'
+[  9%] Built target filib
+make[2]: Entering directory '~/rk_repro/_capd/build'
+make[2]: Leaving directory '~/rk_repro/_capd/build'
+make[2]: Entering directory '~/rk_repro/_capd/build'
+[ 10%] Building CXX object CMakeFiles/capd.dir/capdExt/src/capd/alglib/ap.cpp.o
+[ 13%] Building CXX object CMakeFiles/capd.dir/capdExt/src/capd/alglib/reflections.cpp.o
+[ 11%] Building CXX object CMakeFiles/capd.dir/capdExt/src/capd/alglib/blas.cpp.o
+[ 15%] Building CXX object CMakeFiles/capd.dir/capdExt/src/capd/alglib/nsevd.cpp.o
+[ 15%] Building CXX object CMakeFiles/capd.dir/capdExt/src/capd/alglib/hsschur.cpp.o
+[ 16%] Building CXX object CMakeFiles/capd.dir/capdExt/src/capd/alglib/hessenberg.cpp.o
+[ 18%] Building CXX object CMakeFiles/capd.dir/capdAux/src/capd/auxil/ApplicationDesc.cpp.o
+[ 18%] Building CXX object CMakeFiles/capd.dir/capdAux/src/capd/auxil/skipCommentsIstream.cpp.o
+[ 21%] Building CXX object CMakeFiles/capd.dir/capdAux/src/capd/auxil/logger_deprecated.cpp.o
+[ 21%] Building CXX object CMakeFiles/capd.dir/capdAux/src/capd/auxil/arg.cpp.o
+[ 21%] Building CXX object CMakeFiles/capd.dir/capdExt/src/capd/alglib/rotations.cpp.o
+[ 22%] Building CXX object CMakeFiles/capd.dir/capdAux/src/capd/auxil/ofstreamcout.cpp.o
+[ 23%] Building CXX object CMakeFiles/capd.dir/capdAux/src/capd/auxil/CAPDConfig.cpp.o
+[ 25%] Building CXX object CMakeFiles/capd.dir/capdAux/src/capd/auxil/memSize.cpp.o
+[ 26%] Building CXX object CMakeFiles/capd.dir/capdAux/src/capd/auxil/timeused.cpp.o
+[ 27%] Building CXX object CMakeFiles/capd.dir/capdAlg/src/capd/basicalg/factrial.cpp.o
+[ 28%] Building CXX object CMakeFiles/capd.dir/capdAlg/src/capd/basicalg/ieeePrimitive.cpp.o
+[ 29%] Building CXX object CMakeFiles/capd.dir/capdAlg/src/capd/intervals/DoubleInterval.cpp.o
+[ 30%] Building CXX object CMakeFiles/capd.dir/capdAlg/src/capd/matrixAlgorithms/floatMatrixAlgorithms.cpp.o
+[ 31%] Building CXX object CMakeFiles/capd.dir/capdAlg/src/capd/matrixAlgorithms/intMatrixAlgorithms.cpp.o
+[ 32%] Building CXX object CMakeFiles/capd.dir/capdAlg/src/capd/rings/Zp.cpp.o
+[ 33%] Building CXX object CMakeFiles/capd.dir/capdAlg/src/capd/rounding/DoubleRounding.cpp.o
+[ 34%] Building CXX object CMakeFiles/capd.dir/capdAlg/src/capd/vectalg/Multiindex.cpp.o
+[ 35%] Building CXX object CMakeFiles/capd.dir/capdAlg/src/capd/vectalg/DVector.cpp.o
+[ 36%] Building CXX object CMakeFiles/capd.dir/capdAlg/src/capd/vectalg/DMatrix.cpp.o
+[ 38%] Building CXX object CMakeFiles/capd.dir/capdAlg/src/capd/vectalg/ZVector.cpp.o
+[ 39%] Building CXX object CMakeFiles/capd.dir/capdAlg/src/capd/vectalg/IVector.cpp.o
+[ 40%] Building CXX object CMakeFiles/capd.dir/capdAlg/src/capd/vectalg/Container.cpp.o
+[ 41%] Building CXX object CMakeFiles/capd.dir/capdAlg/src/capd/vectalg/LDVector.cpp.o
+[ 42%] Building CXX object CMakeFiles/capd.dir/capdAlg/src/capd/vectalg/LDMatrix.cpp.o
+[ 43%] Building CXX object CMakeFiles/capd.dir/capdAlg/src/capd/vectalg/IMatrix.cpp.o
+[ 44%] Building CXX object CMakeFiles/capd.dir/capdAlg/src/capd/vectalg/Norm.cpp.o
+[ 45%] Building CXX object CMakeFiles/capd.dir/capdDynSys/src/capd/autodiff/DagIndexer.cpp.o
+[ 46%] Building CXX object CMakeFiles/capd.dir/capdDynSys/src/capd/autodiff/NodeType.cpp.o
+[ 47%] Building CXX object CMakeFiles/capd.dir/capdDynSys/src/capd/covrel/TripleSet.cpp.o
+[ 48%] Building CXX object CMakeFiles/capd.dir/capdDynSys/src/capd/covrel/HSetMD.cpp.o
+[ 50%] Building CXX object CMakeFiles/capd.dir/capdDynSys/src/capd/covrel/HSet2D.cpp.o
+[ 51%] Building CXX object CMakeFiles/capd.dir/capdDynSys/src/capd/covrel/HSet3D.cpp.o
+[ 52%] Building CXX object CMakeFiles/capd.dir/capdDynSys/src/capd/covrel/HSetND.cpp.o
+[ 53%] Building CXX object CMakeFiles/capd.dir/capdDynSys/src/capd/diffAlgebra/CnTimeJet.cpp.o
+[ 54%] Building CXX object CMakeFiles/capd.dir/capdDynSys/src/capd/diffAlgebra/C2TimeJet.cpp.o
+[ 55%] Building CXX object CMakeFiles/capd.dir/capdDynSys/src/capd/diffAlgebra/Curve.cpp.o
+[ 56%] Building CXX object CMakeFiles/capd.dir/capdDynSys/src/capd/diffAlgebra/SolutionCurve.cpp.o
+[ 57%] Building CXX object CMakeFiles/capd.dir/capdDynSys/src/capd/diffAlgebra/C1TimeJet.cpp.o
+[ 58%] Building CXX object CMakeFiles/capd.dir/capdDynSys/src/capd/diffAlgebra/Hessian.cpp.o
+[ 59%] Building CXX object CMakeFiles/capd.dir/capdDynSys/src/capd/diffIncl/DiffInclusionLN.cpp.o
+[ 60%] Building CXX object CMakeFiles/capd.dir/capdDynSys/src/capd/diffIncl/DiffInclusion.cpp.o
+[ 61%] Building CXX object CMakeFiles/capd.dir/capdDynSys/src/capd/diffIncl/MultiMap.cpp.o
+[ 63%] Building CXX object CMakeFiles/capd.dir/capdDynSys/src/capd/diffIncl/InclRect2Set.cpp.o
+[ 64%] Building CXX object CMakeFiles/capd.dir/capdDynSys/src/capd/diffIncl/DiffInclusionCW.cpp.o
+[ 65%] Building CXX object CMakeFiles/capd.dir/capdDynSys/src/capd/dynset/C1DoubletonSet.cpp.o
+[ 66%] Building CXX object CMakeFiles/capd.dir/capdDynSys/src/capd/dynset/CnRect2Set.cpp.o
+[ 67%] Building CXX object CMakeFiles/capd.dir/capdDynSys/src/capd/dynset/CoordReorganize.cpp.o
+[ 68%] Building CXX object CMakeFiles/capd.dir/capdDynSys/src/capd/dynset/C1AffineSet.cpp.o
+[ 69%] Building CXX object CMakeFiles/capd.dir/capdDynSys/src/capd/dynset/C0AffineSet.cpp.o
+[ 70%] Building CXX object CMakeFiles/capd.dir/capdDynSys/src/capd/dynset/C2DoubletonSet.cpp.o
+[ 71%] Building CXX object CMakeFiles/capd.dir/capdDynSys/src/capd/dynset/C0DoubletonSet.cpp.o
+[ 72%] Building CXX object CMakeFiles/capd.dir/capdDynSys/src/capd/dynset/C1HOSet.cpp.o
+[ 73%] Building CXX object CMakeFiles/capd.dir/capdDynSys/src/capd/dynset/CnDoubletonSet.cpp.o
+[ 75%] Building CXX object CMakeFiles/capd.dir/capdDynSys/src/capd/dynset/C11Rect2Set.cpp.o
+[ 76%] Building CXX object CMakeFiles/capd.dir/capdDynSys/src/capd/dynset/C0BallSet.cpp.o
+[ 77%] Building CXX object CMakeFiles/capd.dir/capdDynSys/src/capd/dynset/C0TripletonSet.cpp.o
+[ 78%] Building CXX object CMakeFiles/capd.dir/capdDynSys/src/capd/dynset/FactorReorganization.cpp.o
+[ 79%] Building CXX object CMakeFiles/capd.dir/capdDynSys/src/capd/dynset/C0HOSet.cpp.o
+[ 80%] Building CXX object CMakeFiles/capd.dir/capdDynSys/src/capd/dynset/C0FlowballSet.cpp.o
+[ 81%] Building CXX object CMakeFiles/capd.dir/capdDynSys/src/capd/dynsys/FadOdeSolver.cpp.o
+[ 82%] Building CXX object CMakeFiles/capd.dir/capdDynSys/src/capd/dynsys/DynSys.cpp.o
+[ 83%] Building CXX object CMakeFiles/capd.dir/capdDynSys/src/capd/dynsys/OdeSolver.cpp.o
+[ 84%] Building CXX object CMakeFiles/capd.dir/capdDynSys/src/capd/dynsys/C2OdeSolver.cpp.o
+[ 85%] Building CXX object CMakeFiles/capd.dir/capdDynSys/src/capd/dynsys/CnOdeSolver.cpp.o
+[ 86%] Building CXX object CMakeFiles/capd.dir/capdDynSys/src/capd/geomset/MatrixAffineSet.cpp.o
+[ 88%] Building CXX object CMakeFiles/capd.dir/capdDynSys/src/capd/geomset/TripletonSet.cpp.o
+[ 89%] Building CXX object CMakeFiles/capd.dir/capdDynSys/src/capd/geomset/AffineSet.cpp.o
+[ 90%] Building CXX object CMakeFiles/capd.dir/capdDynSys/src/capd/geomset/DoubletonSet.cpp.o
+[ 91%] Building CXX object CMakeFiles/capd.dir/capdDynSys/src/capd/geomset/MatrixDoubletonSet.cpp.o
+[ 92%] Building CXX object CMakeFiles/capd.dir/capdDynSys/src/capd/map/Function.cpp.o
+[ 93%] Building CXX object CMakeFiles/capd.dir/capdDynSys/src/capd/map/Map.cpp.o
+[ 94%] Building CXX object CMakeFiles/capd.dir/capdDynSys/src/capd/map/Parser.cpp.o
+[ 95%] Building CXX object CMakeFiles/capd.dir/capdDynSys/src/capd/pdes/GeometricBound.cpp.o
+[ 96%] Building CXX object CMakeFiles/capd.dir/capdDynSys/src/capd/poincare/TimeMap.cpp.o
+[ 97%] Building CXX object CMakeFiles/capd.dir/capdDynSys/src/capd/poincare/PoincareMap.cpp.o
+[ 98%] Building CXX object CMakeFiles/capd.dir/capdDynSys/src/capd/poincare/AbstractSection.cpp.o
+[100%] Linking CXX static library libcapd.a
+make[2]: Leaving directory '~/rk_repro/_capd/build'
+[100%] Built target capd
+make[1]: Leaving directory '~/rk_repro/_capd/build'
+make: Leaving directory '~/rk_repro/_capd/build'
+== control: Rossler horseshoe (Zgliczynski 1997), every line must read true
+Existence of attractor: true
+P^2( Left (M) ) < Left (M): true
+P^2( Right(M) ) > Right(N): true
+P^2( Left (N) ) > Right(N): true
+P^2( Right(N) ) < Left (M): true
+Cone condition on the set M: true
+Cone condition on the set N: true
+== checker A on design_mu1_a2_c2.5.txt (log: proof/run_mu1_a2_c2.5.log)
+mu=[1, 1] a=[2, 2] c=[2.5, 2.5]
+L=[2.749524124,3.018818508] R=[3.106175603,3.697478561] w=0.01
+N_L: band |s|<w and no-flip verified; pieces 17246, max depth 12, sup|s| <= 0.009998889323
+N_R: band |s|<w and flip verified;    pieces 43531, max depth 15, sup|s| <= 0.009999670246
+Q(left  edge N_L), need u < r0: u in [2.934285846, 3.01535233] : true
+Q(right edge N_L), need u > r1: u in [3.744159261, 4.015790068] : true
+Q(left  edge N_R), need u > r1: u in [3.712405705, 4.195437783] : true
+Q(right edge N_R), need u < l0: u in [2.612554151, 2.640859314] : true
+RESULT: ALL COVERING CONDITIONS VERIFIED
+
+real	13m44.278s
+user	13m43.671s
+sys	0m0.026s
+== checker A on design_mu1_a3.75_c4.txt (log: proof/run_mu1_a3.75_c4.log)
+mu=[1, 1] a=[3.75, 3.75] c=[4, 4]
+L=[3.181417309,3.460268175] R=[3.563364433,4.161861176] w=0.01
+N_L: band |s|<w and no-flip verified; pieces 48552, max depth 14, sup|s| <= 0.009999725069
+N_R: band |s|<w and flip verified;    pieces 173686, max depth 18, sup|s| <= 0.0099999886
+Q(left  edge N_L), need u < r0: u in [3.349390059, 3.515849952] : true
+Q(right edge N_L), need u > r1: u in [4.166035683, 4.474351931] : true
+Q(left  edge N_R), need u > r1: u in [4.30263241, 4.891211303] : true
+Q(right edge N_R), need u < l0: u in [3.033803165, 3.083436624] : true
+RESULT: ALL COVERING CONDITIONS VERIFIED
+
+real	41m48.732s
+user	41m48.850s
+sys	0m0.014s
+== checker A on design_mu2_a5_c5.8.txt (log: proof/run_mu2_a5_c5.8.log)
+mu=[2, 2] a=[5, 5] c=[5.8, 5.8]
+L=[3.392402525,3.685120702] R=[3.750503112,4.758399143] w=0.003
+N_L: band |s|<w and no-flip verified; pieces 199217, max depth 16, sup|s| <= 0.002999990373
+N_R: band |s|<w and flip verified;    pieces 330178, max depth 18, sup|s| <= 0.002999990373
+Q(left  edge N_L), need u < r0: u in [3.691745416, 3.737879735] : true
+Q(right edge N_L), need u > r1: u in [4.760657223, 4.943260413] : true
+Q(left  edge N_R), need u > r1: u in [4.765245521, 4.923506173] : true
+Q(right edge N_R), need u < l0: u in [3.356164041, 3.366674328] : true
+RESULT: ALL COVERING CONDITIONS VERIFIED
+
+real	99m18.242s
+user	99m16.965s
+sys	0m0.031s
+== negative control, checker A (must end NOT VERIFIED)
+
+real	10m48.910s
+user	10m49.460s
+sys	0m0.000s
+== checker B on design_mu1_a2_c2.5.txt
+
+TOTAL certified leaves=44166 wall=73.5s threads=12  OVERALL=PASS
+COVERAGE AUDIT: PASS
+== negative control, checker B (must end OVERALL=FAIL)
+TOTAL certified leaves=43264 wall=74.9s threads=12  OVERALL=FAIL
+
+real	169m37.189s
+user	203m52.528s
+sys	0m48.917s
+EXIT=0

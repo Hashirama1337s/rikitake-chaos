@@ -1,0 +1,56 @@
+refinement target FRAC=1 (bisect certified pieces while sup|s'| >= FRAC*w, down to width 1e-6)
+checker B -- design design_mu2_a5_c5.8.txt
+parsed (hex): mu=0x1p+1 a=0x1.4p+2 c=0x1.7333333333333p+2 XMID=0x1.f9eab41e2a606p+1 XSC=0x1.9373933b052aep+0
+  C = -0x1.11de9e12ddcefp-18 0x1.7653d065f336ap-16 -0x1.19d31fcd058f4p-14 0x1.41cf28aa47014p-13 0x1.646bf2fd2509p-12 -0x1.2920966e763e8p-7 0x1.547fecddd2424p-4 0x1.0644328881d2p+0 0x1.e6314ec0e3647p+0 
+  l0=0x1.b23a3ef580808p+1 l1=0x1.d7b209002dfecp+1 r0=0x1.e0107c69b301bp+1 r1=0x1.30899c8eba36fp+2 w=0x1.89374bc6a7efap-9
+WARNING: mu,a not 1,2
+  z' = 1 - x y on N_L (crude hull) = [-5.38854, -4.21485]
+  z' = 1 - x y on N_R (crude hull) = [-10.6492, -5.59853]
+
+=== N_L ===
+  verdict: PASS
+  leaves(certified)=194275 attempts=388518 exceptions(->subdivided)=7 failed_leaves=0 maxDepth=16 minLeafWidth=3.57e-05 time=381.0s
+  image X range (union of enclosures) = [3.7067744728773571, 4.8739532671424639]
+  s' = Y-p(X) enclosure range = [-2.999996e-03, 2.999783e-03]   sup|s'| <= 2.999996e-03  (w=0.0030000000000000001)
+  claim1(N_L): no exception & X>0 with sigma=+1 => every point returns transversally and P_x>0 (no flip)
+
+=== N_R ===
+  verdict: PASS
+  leaves(certified)=129049 attempts=258034 exceptions(->subdivided)=8 failed_leaves=0 maxDepth=17 minLeafWidth=3.08e-05 time=259.1s
+  image X range (union of enclosures) = [3.3579258005418029, 4.8580594627462252]
+  s' = Y-p(X) enclosure range = [-2.999965e-03, 2.999987e-03]   sup|s'| <= 2.999987e-03  (w=0.0030000000000000001)
+  claim1(N_R): no exception & X>0 with sigma=-1 => every point returns transversally and P_x<0 (flip)
+
+=== edge_l0 ===
+  verdict: PASS
+  leaves(certified)=8 attempts=15 exceptions(->subdivided)=0 failed_leaves=0 maxDepth=3 minLeafWidth=0.00075 time=0.0s
+  image X range (union of enclosures) = [3.7064380344773604, 3.7234458633979068]
+  s' = Y-p(X) enclosure range = [-2.790131e-03, 2.788910e-03]   sup|s'| <= 2.790131e-03  (w=0.0030000000000000001)
+  claim3: image of {l0}x[-w,w] has X < r0 = 3.750503
+
+=== edge_l1 ===
+  verdict: PASS
+  leaves(certified)=128 attempts=255 exceptions(->subdivided)=0 failed_leaves=0 maxDepth=7 minLeafWidth=4.69e-05 time=0.3s
+  image X range (union of enclosures) = [4.7875866806023506, 4.8736456454445642]
+  s' = Y-p(X) enclosure range = [-2.474102e-03, 2.474000e-03]   sup|s'| <= 2.474102e-03  (w=0.0030000000000000001)
+  claim3: image of {l1}x[-w,w] has X > r1 = 4.758399
+
+=== edge_r0 ===
+  verdict: PASS
+  leaves(certified)=128 attempts=255 exceptions(->subdivided)=0 failed_leaves=0 maxDepth=7 minLeafWidth=4.69e-05 time=0.3s
+  image X range (union of enclosures) = [4.7790955451765642, 4.8579216542567965]
+  s' = Y-p(X) enclosure range = [-2.114689e-03, 2.114840e-03]   sup|s'| <= 2.114840e-03  (w=0.0030000000000000001)
+  claim3: image of {r0}x[-w,w] has X > r1 = 4.758399
+
+=== edge_r1 ===
+  verdict: PASS
+  leaves(certified)=2 attempts=3 exceptions(->subdivided)=0 failed_leaves=0 maxDepth=1 minLeafWidth=0.003 time=0.0s
+  image X range (union of enclosures) = [3.3586150586342818, 3.3642275316877739]
+  s' = Y-p(X) enclosure range = [-1.813504e-03, 1.813137e-03]   sup|s'| <= 1.813504e-03  (w=0.0030000000000000001)
+  claim3: image of {r1}x[-w,w] has X < l0 = 3.392403
+
+TOTAL certified leaves=323590 wall=640.8s threads=10  OVERALL=PASS
+
+real	11m22.196s
+user	112m30.134s
+sys	0m7.865s

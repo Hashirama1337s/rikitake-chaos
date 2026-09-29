@@ -1,0 +1,93 @@
+mu=[1, 1] a=[3.75, 3.75] c=[4, 4]
+L=[3.181417309,3.460268175] R=[3.563364433,4.161861176] w=0.01
+  piece 0 u=[3.181417309,3.18838858] leaves 64 depth 6
+  piece 1 u=[3.18838858,3.195359852] leaves 64 depth 6
+  piece 2 u=[3.195359852,3.202331124] leaves 64 depth 6
+  piece 3 u=[3.202331124,3.209302395] leaves 77 depth 7
+  piece 4 u=[3.209302395,3.216273667] leaves 96 depth 7
+  piece 5 u=[3.216273667,3.223244939] leaves 110 depth 7
+  piece 6 u=[3.223244939,3.23021621] leaves 125 depth 7
+  piece 7 u=[3.23021621,3.237187482] leaves 128 depth 7
+  piece 8 u=[3.237187482,3.244158754] leaves 150 depth 8
+  piece 9 u=[3.244158754,3.251130025] leaves 187 depth 8
+  piece 10 u=[3.251130025,3.258101297] leaves 222 depth 8
+  piece 11 u=[3.258101297,3.265072569] leaves 252 depth 8
+  piece 12 u=[3.265072569,3.27204384] leaves 256 depth 8
+  piece 13 u=[3.27204384,3.279015112] leaves 256 depth 8
+  piece 14 u=[3.279015112,3.285986383] leaves 256 depth 8
+  piece 15 u=[3.285986383,3.292957655] leaves 256 depth 8
+  piece 16 u=[3.292957655,3.299928927] leaves 259 depth 9
+  piece 17 u=[3.299928927,3.306900198] leaves 308 depth 9
+  piece 18 u=[3.306900198,3.31387147] leaves 374 depth 9
+  piece 19 u=[3.31387147,3.320842742] leaves 440 depth 9
+  piece 20 u=[3.320842742,3.327814013] leaves 502 depth 9
+  piece 21 u=[3.327814013,3.334785285] leaves 512 depth 9
+  piece 22 u=[3.334785285,3.341756557] leaves 512 depth 9
+  piece 23 u=[3.341756557,3.348727828] leaves 512 depth 9
+  piece 24 u=[3.348727828,3.3556991] leaves 512 depth 9
+  piece 25 u=[3.3556991,3.362670372] leaves 512 depth 9
+  piece 26 u=[3.362670372,3.369641643] leaves 576 depth 10
+  piece 27 u=[3.369641643,3.376612915] leaves 716 depth 10
+  piece 28 u=[3.376612915,3.383584187] leaves 844 depth 10
+  piece 29 u=[3.383584187,3.390555458] leaves 980 depth 10
+  piece 30 u=[3.390555458,3.39752673] leaves 1129 depth 11
+  piece 31 u=[3.39752673,3.404498002] leaves 1398 depth 11
+  piece 32 u=[3.404498002,3.411469273] leaves 1722 depth 12
+  piece 33 u=[3.411469273,3.418440545] leaves 2446 depth 12
+  piece 34 u=[3.418440545,3.425411817] leaves 3085 depth 12
+  piece 35 u=[3.425411817,3.432383088] leaves 3626 depth 12
+  piece 36 u=[3.432383088,3.43935436] leaves 4528 depth 13
+  piece 37 u=[3.43935436,3.446325632] leaves 5535 depth 13
+  piece 38 u=[3.446325632,3.453296903] leaves 6574 depth 13
+  piece 39 u=[3.453296903,3.460268175] leaves 8387 depth 14
+N_L: band |s|<w and no-flip verified; pieces 48552, max depth 14, sup|s| <= 0.009999725069
+  piece 0 u=[3.563364433,3.578326851] leaves 43331 depth 18
+  piece 1 u=[3.578326851,3.59328927] leaves 23737 depth 15
+  piece 2 u=[3.59328927,3.608251688] leaves 15748 depth 15
+  piece 3 u=[3.608251688,3.623214107] leaves 10325 depth 14
+  piece 4 u=[3.623214107,3.638176526] leaves 6425 depth 14
+  piece 5 u=[3.638176526,3.653138944] leaves 3937 depth 13
+  piece 6 u=[3.653138944,3.668101363] leaves 2485 depth 12
+  piece 7 u=[3.668101363,3.683063781] leaves 2048 depth 11
+  piece 8 u=[3.683063781,3.6980262] leaves 2048 depth 11
+  piece 9 u=[3.6980262,3.712988618] leaves 2048 depth 11
+  piece 10 u=[3.712988618,3.727951037] leaves 1898 depth 11
+  piece 11 u=[3.727951037,3.742913456] leaves 1327 depth 11
+  piece 12 u=[3.742913456,3.757875874] leaves 1025 depth 11
+  piece 13 u=[3.757875874,3.772838293] leaves 1024 depth 10
+  piece 14 u=[3.772838293,3.787800711] leaves 1024 depth 10
+  piece 15 u=[3.787800711,3.80276313] leaves 926 depth 10
+  piece 16 u=[3.80276313,3.817725548] leaves 648 depth 10
+  piece 17 u=[3.817725548,3.832687967] leaves 512 depth 9
+  piece 18 u=[3.832687967,3.847650386] leaves 512 depth 9
+  piece 19 u=[3.847650386,3.862612804] leaves 457 depth 9
+  piece 20 u=[3.862612804,3.877575223] leaves 323 depth 9
+  piece 21 u=[3.877575223,3.892537641] leaves 256 depth 8
+  piece 22 u=[3.892537641,3.90750006] leaves 256 depth 8
+  piece 23 u=[3.90750006,3.922462478] leaves 250 depth 8
+  piece 24 u=[3.922462478,3.937424897] leaves 198 depth 8
+  piece 25 u=[3.937424897,3.952387316] leaves 138 depth 8
+  piece 26 u=[3.952387316,3.967349734] leaves 128 depth 7
+  piece 27 u=[3.967349734,3.982312153] leaves 128 depth 7
+  piece 28 u=[3.982312153,3.997274571] leaves 128 depth 7
+  piece 29 u=[3.997274571,4.01223699] leaves 128 depth 7
+  piece 30 u=[4.01223699,4.027199409] leaves 128 depth 7
+  piece 31 u=[4.027199409,4.042161827] leaves 128 depth 7
+  piece 32 u=[4.042161827,4.057124246] leaves 128 depth 7
+  piece 33 u=[4.057124246,4.072086664] leaves 128 depth 7
+  piece 34 u=[4.072086664,4.087049083] leaves 128 depth 7
+  piece 35 u=[4.087049083,4.102011501] leaves 128 depth 7
+  piece 36 u=[4.102011501,4.11697392] leaves 129 depth 8
+  piece 37 u=[4.11697392,4.131936339] leaves 180 depth 8
+  piece 38 u=[4.131936339,4.146898757] leaves 258 depth 9
+  piece 39 u=[4.146898757,4.161861176] leaves 381 depth 9
+N_R: band |s|<w and flip verified;    pieces 173686, max depth 18, sup|s| <= 0.0099999886
+Q(left  edge N_L), need u < r0: u in [3.349390059, 3.515849952] : true
+Q(right edge N_L), need u > r1: u in [4.166035683, 4.474351931] : true
+Q(left  edge N_R), need u > r1: u in [4.30263241, 4.891211303] : true
+Q(right edge N_R), need u < l0: u in [3.033803165, 3.083436624] : true
+RESULT: ALL COVERING CONDITIONS VERIFIED
+
+real	41m48.732s
+user	41m48.850s
+sys	0m0.014s

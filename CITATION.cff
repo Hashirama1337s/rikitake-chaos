@@ -1,0 +1,26 @@
+cff-version: 1.2.0
+message: "If you use this result or these tools, please cite them as below."
+title: "Moki&Julio: Rikitake's two-disc dynamo is chaotic - a computer-assisted proof"
+authors:
+  - name: "Moki&Julio"
+date-released: 2026-09-29
+version: "1.0"
+repository-code: "https://github.com/Hashirama1337s/rikitake-chaos"
+license: CC-BY-4.0
+keywords:
+  - Rikitake dynamo
+  - geomagnetic reversals
+  - chaos
+  - symbolic dynamics
+  - topological entropy
+  - covering relations
+  - computer-assisted proof
+  - interval arithmetic
+  - CAPD
+abstract: >-
+  The Rikitake two-disc dynamo (1958), the classic minimal model of geomagnetic polarity reversals, has been called
+  chaotic since Ito's 1980 numerical study but its chaos had not been proved. For three parameter values we prove, with
+  rigorous interval-arithmetic Poincare maps (CAPD), covering relations for the symmetry-reduced return map to a plane
+  section. Consequently every reversal pattern with no two consecutive non-reversal loops is realised by a true solution,
+  there are infinitely many periodic orbits, and the return map has topological entropy at least log of the golden ratio.
+  Two independently written checkers, a known-result control and a negative control are included.

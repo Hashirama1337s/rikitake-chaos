@@ -1,6 +1,6 @@
 # Rikitake's dynamo is chaotic: a computer-assisted proof
 
-**Moki&Julio · 2026**
+**Moki&Julio · 2026** · DOI [10.5281/zenodo.23041182](https://doi.org/10.5281/zenodo.23041182)
 
 In 1958 Tsuneji Rikitake proposed the simplest mechanical model of a planet's magnetic field flipping: two
 spinning copper discs, each driving current through the other's coil. Its three equations
@@ -109,4 +109,4 @@ here.
 ## Licence and citation
 
 Text and results CC-BY-4.0 (`LICENSE`); code MIT (`LICENSE-CODE`). CAPD is used under its own licence and is not
-redistributed. Built with AI assistance. See `CITATION.cff`.
+redistributed. Built with AI assistance. See `CITATION.cff`; cite as Moki&Julio (2026), *Rikitake's two-disc dynamo is chaotic: a computer-assisted proof*, Zenodo, doi:10.5281/zenodo.23041182.

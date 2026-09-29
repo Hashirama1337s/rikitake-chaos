@@ -82,7 +82,7 @@ Two independent programs were run on every case: **checker A** (`proof/check.cpp
 (`independent/`, written independently from the mathematical specification only, without access to checker A).
 Both verify all three cases. Checker B's pieces are additionally audited to tile each set exactly (`independent/audit_b*.log`); on (1, 2) a tightened run shows every image within |s| ≤ 0.003 of the curve against w = 0.01.
 
-Controls: CAPD's own proof of the Rössler horseshoe (Zgliczyński 1997) reproduces (`proof/control/`), and a
+Controls: CAPD's own proof of the Rössler horseshoe (Zgliczyński 1997) reproduces (`reproduce.sh` builds it from the CAPD sources), and a
 deliberately false design (one edge moved so its condition fails by a clear margin) is rejected by both checkers.
 
 ## Reproduce

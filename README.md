@@ -110,3 +110,12 @@ here.
 
 Text and results CC-BY-4.0 (`LICENSE`); code MIT (`LICENSE-CODE`). CAPD is used under its own licence and is not
 redistributed. Built with AI assistance. See `CITATION.cff`; cite as Moki&Julio (2026), *Rikitake's two-disc dynamo is chaotic: a computer-assisted proof*, Zenodo, doi:10.5281/zenodo.23041182.
+
+## Other work by Moki & Julio
+
+- [moki-julio-wifi-ris-cell](https://github.com/Hashirama1337s/moki-julio-wifi-ris-cell): One 1-bit reconfigurable-intelligent-surface cell covering the 2.4 GHz and 5-7 GHz Wi-Fi bands with one switch state (simulation study, Palace FEM) ([doi:10.5281/zenodo.23165406](https://doi.org/10.5281/zenodo.23165406))
+- [szilassi-12](https://github.com/Hashirama1337s/szilassi-12): No symmetric 12-face Szilassi polyhedron: a computer-assisted proof with DRAT certificates ([doi:10.5281/zenodo.23003257](https://doi.org/10.5281/zenodo.23003257))
+- [moki-julio-circle-packing](https://github.com/Hashirama1337s/moki-julio-circle-packing): 6,071 new best-known packings of equal circles, spheres and hyperspheres, each verified by two independent exact checkers ([doi:10.5281/zenodo.22981305](https://doi.org/10.5281/zenodo.22981305))
+- [kinect-v1-depth-levels](https://github.com/Hashirama1337s/kinect-v1-depth-levels): The Xbox 360 Kinect measured as an instrument: the depth lattice, three noise populations, drift and a capability map
+
+All projects: [github.com/Hashirama1337s](https://github.com/Hashirama1337s)

@@ -14,5 +14,5 @@ MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVE
 FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
 WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-Everything else in this repository (certificates/, packomania/, local_optimality/, proofs/, MANIFEST.csv, RESULTS_TABLE.md,
-figures/, the text files) is licensed under Creative Commons Attribution 4.0 International (CC BY 4.0): see LICENSE.
+Everything else in this repository (README.md, figure.png, CITATION.cff, the design and log text files and the compressed
+certificate data in independent/) is licensed under Creative Commons Attribution 4.0 International (CC BY 4.0): see LICENSE.

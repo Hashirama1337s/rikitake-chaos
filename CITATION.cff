@@ -3,8 +3,8 @@ message: "If you use this result or these tools, please cite them as below."
 title: "Moki&Julio: Rikitake's two-disc dynamo is chaotic - a computer-assisted proof"
 authors:
   - name: "Moki&Julio"
-date-released: 2026-09-29
-version: "1.0"
+date-released: 2026-10-05
+version: "1.1"
 doi: 10.5281/zenodo.23041182
 repository-code: "https://github.com/Hashirama1337s/rikitake-chaos"
 license: CC-BY-4.0

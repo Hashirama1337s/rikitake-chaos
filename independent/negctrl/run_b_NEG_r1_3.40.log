@@ -1,0 +1,51 @@
+checker B process-parallel run: spec=negctrl/rikitake_NEG_r1_3.40.spec tag=NEG_r1_3.40 nproc=12 FRAC=1.0 ngrid=64 maxsecs/job=7000
+checker B generic verifier -- spec negctrl/rikitake_NEG_r1_3.40.spec
+vector field: par:mu,a;var:x,y,z;fun:-mu*x+y*z,-mu*y+(z-a)*x,1-x*y;
+params: mu=0x1p+0 a=0x1p+1
+section X_2 = 0x1.4p+1, dir=-1 (PlusMinus), iterate n=1; sym=1 D=(-1,-1,1) ell=(0x1p+0,0x0p+0,0x0p+0)
+eu=(0x1p+0,0x0p+0,0x0p+0) ev=(0x0p+0,0x1p+0,0x0p+0); p: xmid=0x1.6dd921e67adabp+1 xsc=0x1.8ca08601caa16p+0, 9 coefs: 0x1.7b2827c67b4bcp-2 -0x1.5f6840b61fefdp+0 0x1.9e8952aeef18fp+0 -0x1.a7198b57b5f0dp-2 -0x1.8483c8b82ab1bp-2 0x1.403e8dd15a18bp-3 0x1.6b84d82bc7897p-4 0x1.45b95bdaacaa6p+0 0x1.b7166963ac5e3p+0
+w=0x1.47ae147ae147bp-7; 2 sets; FRAC=1; max 7000s per run; initial grid 64 strips
+  set 0: [0x1.5ff0680f22e24p+1,0x1.8268a516501d2p+1] orient=+1 Tlo=0x1.8d972982e7fbep+1 Thi=0x1.b333333333333p+1 fold=0
+  set 1: [0x1.8d972982e7fbep+1,0x1.b333333333333p+1] orient=-1 Tlo=0x1.5ff0680f22e24p+1 Thi=0x1.b333333333333p+1 fold=1
+  symmetry checks: D involution (entries +-1): yes; D maps Sigma to itself (D_k=1 or c=0): yes; ell.D = -ell (fold unique): yes
+  (that D commutes with the flow is part of the spec's hypothesis; not re-checked here)
+
+=== S0 (claims 1+2 on the whole set) ===
+  verdict: PASS
+  jobs=64 leaves=17163 attempts=34262 exceptions(->subdivided)=12 failed_leaves=0 [exc=0 fold/ell=0 s=0 edge=0] maxDepth=12 minLeafWidth=0.000156 cpu=285.2s
+  image u range = [2.9564660124136029, 3.9318369932161223]
+  s' range = [-9.999075e-03, 9.999486e-03]  sup|s'| <= 9.999486e-03  (w=0.01)
+  min ell.Q >= 2.95647
+=== S0_lo (claim 3 edge u=lo: u(Q) < 3.10617560283569) ===
+  verdict: PASS
+  jobs=1 leaves=8 attempts=15 exceptions(->subdivided)=0 failed_leaves=0 [exc=0 fold/ell=0 s=0 edge=0] maxDepth=3 minLeafWidth=0.0025 cpu=0.2s
+  image u range = [2.9568491862434043, 2.9945704897766072]
+  s' range = [-5.233481e-03, 6.265635e-03]  sup|s'| <= 6.265635e-03  (w=0.01)
+  min ell.Q >= 2.95685
+=== S0_hi (claim 3 edge u=hi: u(Q) > 3.40) ===
+  verdict: PASS
+  jobs=1 leaves=64 attempts=127 exceptions(->subdivided)=1 failed_leaves=0 [exc=0 fold/ell=0 s=0 edge=0] maxDepth=6 minLeafWidth=0.000312 cpu=1.0s
+  image u range = [3.7684985867985721, 3.9322774791811526]
+  s' range = [-6.669036e-03, 8.641831e-03]  sup|s'| <= 8.641831e-03  (w=0.01)
+  min ell.Q >= 3.7685
+=== S1 (claims 1+2 on the whole set) ===
+  verdict: PASS
+  jobs=64 leaves=25947 attempts=51830 exceptions(->subdivided)=19 failed_leaves=0 [exc=0 fold/ell=0 s=0 edge=0] maxDepth=13 minLeafWidth=0.000143 cpu=448.4s
+  image u range = [2.9785890201889647, 4.0550904287714902]
+  s' range = [-9.999873e-03, 9.999992e-03]  sup|s'| <= 9.999992e-03  (w=0.01)
+  min ell.Q >= 2.97859
+=== S1_lo (claim 3 edge u=lo: u(Q) > 3.40) ===
+  verdict: PASS
+  jobs=1 leaves=82 attempts=163 exceptions(->subdivided)=2 failed_leaves=0 [exc=0 fold/ell=0 s=0 edge=0] maxDepth=7 minLeafWidth=0.000156 cpu=1.5s
+  image u range = [3.8513844632651208, 4.0537822585909309]
+  s' range = [-7.577228e-03, 9.910537e-03]  sup|s'| <= 9.910537e-03  (w=0.01)
+  min ell.Q >= 3.85138
+=== S1_hi (claim 3 edge u=hi: u(Q) < 2.749524123564486) ===
+  verdict: FAIL
+  jobs=1 leaves=0 attempts=1 exceptions(->subdivided)=0 failed_leaves=1 [exc=0 fold/ell=0 s=1 edge=1] maxDepth=0 minLeafWidth=1e+300 cpu=0.0s
+  image u range = [1.0000000000000001e+300, -1.0000000000000001e+300]
+  s' range = [1.000000e+300, -1.000000e+300]  sup|s'| <= 0.000000e+00  (w=0.01)
+  min ell.Q >= 1e+300
+  FAILMSG S1_hi FAIL piece u=[3.3999999999999999,3.3999999999999999] s=[-0.01,0.01]: |s'|<w not certified; edge X<bound not certified; [definite: X>=bound]  X=[2.9692356,3.0260428] S=[-0.0433098,0.0457302]
+
+TOTAL leaves=43264 wall=85.2s  OVERALL=FAIL

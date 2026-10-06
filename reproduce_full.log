@@ -1,4 +1,4 @@
-Cloning into '~/rk_repro/_capd'...
+Cloning into '<repo>/_capd'...
 Note: switching to '03dc5628203334b214bb7d9fd63788a175521005'.
 
 You are in 'detached HEAD' state. You can look around, make experimental
@@ -29,47 +29,47 @@ HEAD is now at 03dc562 corrected split function in intervals
 -- Check for working CXX compiler: /usr/bin/c++ - skipped
 -- Detecting CXX compile features
 -- Detecting CXX compile features - done
--- CMake version: 3.31.10
+-- CMake version: 3.28.3
 -- CAPD version : 6.1.0
 -- Build CAPD tests    : OFF
 -- Build CAPD examples : OFF
 -- CAPD multiprecision : OFF
 -- CAPD interval type  : FILIB
 -- Processor arch: 64-bit x86 (SSE)
--- Configuring done (4.8s)
--- Generating done (0.1s)
--- Build files have been written to: ~/rk_repro/_capd/build
-make: Entering directory '~/rk_repro/_capd/build'
-make[1]: Entering directory '~/rk_repro/_capd/build'
-make[2]: Entering directory '~/rk_repro/_capd/build'
-make[2]: Leaving directory '~/rk_repro/_capd/build'
-make[2]: Entering directory '~/rk_repro/_capd/build'
-[  2%] Building CXX object capdExt/filibsrc/CMakeFiles/filib.dir/ieee/primitive.cpp.o
-[  2%] Building CXX object capdExt/filibsrc/CMakeFiles/filib.dir/interval/stdfun/filib_consts.cpp.o
+-- Configuring done (4.0s)
+-- Generating done (0.0s)
+-- Build files have been written to: <repo>/_capd/build
+make: Entering directory '<repo>/_capd/build'
+make[1]: Entering directory '<repo>/_capd/build'
+make[2]: Entering directory '<repo>/_capd/build'
+make[2]: Leaving directory '<repo>/_capd/build'
+make[2]: Entering directory '<repo>/_capd/build'
+[  3%] Building CXX object capdExt/filibsrc/CMakeFiles/filib.dir/interval/stdfun/filib_consts.cpp.o
+[  3%] Building CXX object capdExt/filibsrc/CMakeFiles/filib.dir/ieee/primitive.cpp.o
 [  3%] Building CXX object capdExt/filibsrc/CMakeFiles/filib.dir/fp_traits/fp_traits_double_setup.cpp.o
 [  4%] Building CXX object capdExt/filibsrc/CMakeFiles/filib.dir/fp_traits/fp_traits_base_double_setup.cpp.o
-[  5%] Building CXX object capdExt/filibsrc/CMakeFiles/filib.dir/fp_traits/fp_traits_float_setup.cpp.o
-[  6%] Building CXX object capdExt/filibsrc/CMakeFiles/filib.dir/fp_traits/fp_traits_base_float_setup.cpp.o
-[  7%] Building CXX object capdExt/filibsrc/CMakeFiles/filib.dir/fp_traits/fp_traits_sse_const.cpp.o
-[  8%] Building CXX object capdExt/filibsrc/CMakeFiles/filib.dir/fp_traits/fp_traits_x87_const.cpp.o
+[  5%] Building CXX object capdExt/filibsrc/CMakeFiles/filib.dir/fp_traits/fp_traits_base_float_setup.cpp.o
+[  7%] Building CXX object capdExt/filibsrc/CMakeFiles/filib.dir/fp_traits/fp_traits_float_setup.cpp.o
+[  6%] Building CXX object capdExt/filibsrc/CMakeFiles/filib.dir/fp_traits/fp_traits_x87_const.cpp.o
+[  8%] Building CXX object capdExt/filibsrc/CMakeFiles/filib.dir/fp_traits/fp_traits_sse_const.cpp.o
 [  9%] Linking CXX static library libfilib.a
-make[2]: Leaving directory '~/rk_repro/_capd/build'
+make[2]: Leaving directory '<repo>/_capd/build'
 [  9%] Built target filib
-make[2]: Entering directory '~/rk_repro/_capd/build'
-make[2]: Leaving directory '~/rk_repro/_capd/build'
-make[2]: Entering directory '~/rk_repro/_capd/build'
-[ 10%] Building CXX object CMakeFiles/capd.dir/capdExt/src/capd/alglib/ap.cpp.o
-[ 13%] Building CXX object CMakeFiles/capd.dir/capdExt/src/capd/alglib/reflections.cpp.o
+make[2]: Entering directory '<repo>/_capd/build'
+make[2]: Leaving directory '<repo>/_capd/build'
+make[2]: Entering directory '<repo>/_capd/build'
 [ 11%] Building CXX object CMakeFiles/capd.dir/capdExt/src/capd/alglib/blas.cpp.o
-[ 15%] Building CXX object CMakeFiles/capd.dir/capdExt/src/capd/alglib/nsevd.cpp.o
-[ 15%] Building CXX object CMakeFiles/capd.dir/capdExt/src/capd/alglib/hsschur.cpp.o
-[ 16%] Building CXX object CMakeFiles/capd.dir/capdExt/src/capd/alglib/hessenberg.cpp.o
-[ 18%] Building CXX object CMakeFiles/capd.dir/capdAux/src/capd/auxil/ApplicationDesc.cpp.o
-[ 18%] Building CXX object CMakeFiles/capd.dir/capdAux/src/capd/auxil/skipCommentsIstream.cpp.o
-[ 21%] Building CXX object CMakeFiles/capd.dir/capdAux/src/capd/auxil/logger_deprecated.cpp.o
-[ 21%] Building CXX object CMakeFiles/capd.dir/capdAux/src/capd/auxil/arg.cpp.o
-[ 21%] Building CXX object CMakeFiles/capd.dir/capdExt/src/capd/alglib/rotations.cpp.o
-[ 22%] Building CXX object CMakeFiles/capd.dir/capdAux/src/capd/auxil/ofstreamcout.cpp.o
+[ 11%] Building CXX object CMakeFiles/capd.dir/capdExt/src/capd/alglib/ap.cpp.o
+[ 13%] Building CXX object CMakeFiles/capd.dir/capdExt/src/capd/alglib/hessenberg.cpp.o
+[ 14%] Building CXX object CMakeFiles/capd.dir/capdExt/src/capd/alglib/hsschur.cpp.o
+[ 15%] Building CXX object CMakeFiles/capd.dir/capdExt/src/capd/alglib/reflections.cpp.o
+[ 16%] Building CXX object CMakeFiles/capd.dir/capdExt/src/capd/alglib/nsevd.cpp.o
+[ 17%] Building CXX object CMakeFiles/capd.dir/capdAux/src/capd/auxil/arg.cpp.o
+[ 18%] Building CXX object CMakeFiles/capd.dir/capdExt/src/capd/alglib/rotations.cpp.o
+[ 19%] Building CXX object CMakeFiles/capd.dir/capdAux/src/capd/auxil/ApplicationDesc.cpp.o
+[ 20%] Building CXX object CMakeFiles/capd.dir/capdAux/src/capd/auxil/skipCommentsIstream.cpp.o
+[ 21%] Building CXX object CMakeFiles/capd.dir/capdAux/src/capd/auxil/ofstreamcout.cpp.o
+[ 22%] Building CXX object CMakeFiles/capd.dir/capdAux/src/capd/auxil/logger_deprecated.cpp.o
 [ 23%] Building CXX object CMakeFiles/capd.dir/capdAux/src/capd/auxil/CAPDConfig.cpp.o
 [ 25%] Building CXX object CMakeFiles/capd.dir/capdAux/src/capd/auxil/memSize.cpp.o
 [ 26%] Building CXX object CMakeFiles/capd.dir/capdAux/src/capd/auxil/timeused.cpp.o
@@ -108,8 +108,8 @@ make[2]: Entering directory '~/rk_repro/_capd/build'
 [ 61%] Building CXX object CMakeFiles/capd.dir/capdDynSys/src/capd/diffIncl/MultiMap.cpp.o
 [ 63%] Building CXX object CMakeFiles/capd.dir/capdDynSys/src/capd/diffIncl/InclRect2Set.cpp.o
 [ 64%] Building CXX object CMakeFiles/capd.dir/capdDynSys/src/capd/diffIncl/DiffInclusionCW.cpp.o
-[ 65%] Building CXX object CMakeFiles/capd.dir/capdDynSys/src/capd/dynset/C1DoubletonSet.cpp.o
-[ 66%] Building CXX object CMakeFiles/capd.dir/capdDynSys/src/capd/dynset/CnRect2Set.cpp.o
+[ 65%] Building CXX object CMakeFiles/capd.dir/capdDynSys/src/capd/dynset/CnRect2Set.cpp.o
+[ 66%] Building CXX object CMakeFiles/capd.dir/capdDynSys/src/capd/dynset/C1DoubletonSet.cpp.o
 [ 67%] Building CXX object CMakeFiles/capd.dir/capdDynSys/src/capd/dynset/CoordReorganize.cpp.o
 [ 68%] Building CXX object CMakeFiles/capd.dir/capdDynSys/src/capd/dynset/C1AffineSet.cpp.o
 [ 69%] Building CXX object CMakeFiles/capd.dir/capdDynSys/src/capd/dynset/C0AffineSet.cpp.o
@@ -118,8 +118,8 @@ make[2]: Entering directory '~/rk_repro/_capd/build'
 [ 72%] Building CXX object CMakeFiles/capd.dir/capdDynSys/src/capd/dynset/C1HOSet.cpp.o
 [ 73%] Building CXX object CMakeFiles/capd.dir/capdDynSys/src/capd/dynset/CnDoubletonSet.cpp.o
 [ 75%] Building CXX object CMakeFiles/capd.dir/capdDynSys/src/capd/dynset/C11Rect2Set.cpp.o
-[ 76%] Building CXX object CMakeFiles/capd.dir/capdDynSys/src/capd/dynset/C0BallSet.cpp.o
-[ 77%] Building CXX object CMakeFiles/capd.dir/capdDynSys/src/capd/dynset/C0TripletonSet.cpp.o
+[ 76%] Building CXX object CMakeFiles/capd.dir/capdDynSys/src/capd/dynset/C0TripletonSet.cpp.o
+[ 77%] Building CXX object CMakeFiles/capd.dir/capdDynSys/src/capd/dynset/C0BallSet.cpp.o
 [ 78%] Building CXX object CMakeFiles/capd.dir/capdDynSys/src/capd/dynset/FactorReorganization.cpp.o
 [ 79%] Building CXX object CMakeFiles/capd.dir/capdDynSys/src/capd/dynset/C0HOSet.cpp.o
 [ 80%] Building CXX object CMakeFiles/capd.dir/capdDynSys/src/capd/dynset/C0FlowballSet.cpp.o
@@ -141,10 +141,20 @@ make[2]: Entering directory '~/rk_repro/_capd/build'
 [ 97%] Building CXX object CMakeFiles/capd.dir/capdDynSys/src/capd/poincare/PoincareMap.cpp.o
 [ 98%] Building CXX object CMakeFiles/capd.dir/capdDynSys/src/capd/poincare/AbstractSection.cpp.o
 [100%] Linking CXX static library libcapd.a
-make[2]: Leaving directory '~/rk_repro/_capd/build'
+make[2]: Leaving directory '<repo>/_capd/build'
 [100%] Built target capd
-make[1]: Leaving directory '~/rk_repro/_capd/build'
-make: Leaving directory '~/rk_repro/_capd/build'
+make[1]: Leaving directory '<repo>/_capd/build'
+make: Leaving directory '<repo>/_capd/build'
+CAPD commit: 03dc5628203334b214bb7d9fd63788a175521005
+sha256 of the proof inputs:
+c393ab5f10da314b40a58dddb30824b408180f8f8cf6f4fa2311f28e9e90f419  proof/check.cpp
+047c13eb119d293d6cf8985965c2ace9cb5e7f3d464c9c1c0f43a2926365be19  proof/design_mu1_a2_c2.5.txt
+4f00ff5323d00257466c21b9d9fbb5bce8ac64c537a70574f9db78987ce569f6  proof/design_mu1_a3.75_c4.txt
+3de236040cfcec8328edb5f1dbab89e54bb32069bd23f205cea9684cf3b11654  proof/design_mu2_a5_c5.8.txt
+0ff3e786f53e470d5b4e3838466fd260e59c4539866b157542bb56f0be42033f  independent/verify_b_gen.cpp
+ac9edcdb23bde86b3311ecfe73ba79cb7fc4c2cb4a48c2928675c8837653b79e  independent/rikitake_published_mu1_a2_c2.5.spec
+2971b4e9f425e5643cb984f64dd792d5dbe258fa6fd0278253ecf564b056f1c1  independent/rikitake_published_mu1_a3.75_c4.spec
+6659ecdb09eb2b1a692b59c6c68fe111f1328f31aaa3f1fbc0a06426a6938db6  independent/rikitake_published_mu2_a5_c5.8.spec
 == control: Rossler horseshoe (Zgliczynski 1997), every line must read true
 Existence of attractor: true
 P^2( Left (M) ) < Left (M): true
@@ -156,58 +166,56 @@ Cone condition on the set N: true
 == checker A on design_mu1_a2_c2.5.txt (log: proof/run_mu1_a2_c2.5.log)
 mu=[1, 1] a=[2, 2] c=[2.5, 2.5]
 L=[2.749524124,3.018818508] R=[3.106175603,3.697478561] w=0.01
-N_L: band |s|<w and no-flip verified; pieces 17246, max depth 12, sup|s| <= 0.009998889323
-N_R: band |s|<w and flip verified;    pieces 43531, max depth 15, sup|s| <= 0.009999670246
+N_L: band |s|<w and no-flip verified; pieces 17418, max depth 13, sup|s| <= 0.009998889323
+N_R: band |s|<w and flip verified;    pieces 44623, max depth 16, sup|s| <= 0.009999860322
 Q(left  edge N_L), need u < r0: u in [2.934285846, 3.01535233] : true
 Q(right edge N_L), need u > r1: u in [3.744159261, 4.015790068] : true
 Q(left  edge N_R), need u > r1: u in [3.712405705, 4.195437783] : true
 Q(right edge N_R), need u < l0: u in [2.612554151, 2.640859314] : true
 RESULT: ALL COVERING CONDITIONS VERIFIED
 
-real	13m44.278s
-user	13m43.671s
-sys	0m0.026s
+real	8m53.573s
+user	8m54.920s
+sys	0m0.005s
 == checker A on design_mu1_a3.75_c4.txt (log: proof/run_mu1_a3.75_c4.log)
 mu=[1, 1] a=[3.75, 3.75] c=[4, 4]
 L=[3.181417309,3.460268175] R=[3.563364433,4.161861176] w=0.01
-N_L: band |s|<w and no-flip verified; pieces 48552, max depth 14, sup|s| <= 0.009999725069
-N_R: band |s|<w and flip verified;    pieces 173686, max depth 18, sup|s| <= 0.0099999886
+N_L: band |s|<w and no-flip verified; pieces 51702, max depth 14, sup|s| <= 0.00999994513
+N_R: band |s|<w and flip verified;    pieces 301141, max depth 21, sup|s| <= 0.00999998734
 Q(left  edge N_L), need u < r0: u in [3.349390059, 3.515849952] : true
 Q(right edge N_L), need u > r1: u in [4.166035683, 4.474351931] : true
 Q(left  edge N_R), need u > r1: u in [4.30263241, 4.891211303] : true
 Q(right edge N_R), need u < l0: u in [3.033803165, 3.083436624] : true
 RESULT: ALL COVERING CONDITIONS VERIFIED
 
-real	41m48.732s
-user	41m48.850s
-sys	0m0.014s
+real	55m27.721s
+user	55m27.820s
+sys	0m0.009s
 == checker A on design_mu2_a5_c5.8.txt (log: proof/run_mu2_a5_c5.8.log)
 mu=[2, 2] a=[5, 5] c=[5.8, 5.8]
 L=[3.392402525,3.685120702] R=[3.750503112,4.758399143] w=0.003
-N_L: band |s|<w and no-flip verified; pieces 199217, max depth 16, sup|s| <= 0.002999990373
-N_R: band |s|<w and flip verified;    pieces 330178, max depth 18, sup|s| <= 0.002999990373
+N_L: band |s|<w and no-flip verified; pieces 199218, max depth 16, sup|s| <= 0.002999984301
+N_R: band |s|<w and flip verified;    pieces 330180, max depth 18, sup|s| <= 0.002999998278
 Q(left  edge N_L), need u < r0: u in [3.691745416, 3.737879735] : true
 Q(right edge N_L), need u > r1: u in [4.760657223, 4.943260413] : true
 Q(left  edge N_R), need u > r1: u in [4.765245521, 4.923506173] : true
 Q(right edge N_R), need u < l0: u in [3.356164041, 3.366674328] : true
 RESULT: ALL COVERING CONDITIONS VERIFIED
 
-real	99m18.242s
-user	99m16.965s
-sys	0m0.031s
+real	72m29.053s
+user	72m27.166s
+sys	0m0.013s
 == negative control, checker A (must end NOT VERIFIED)
-
-real	10m48.910s
-user	10m49.460s
-sys	0m0.000s
-== checker B on design_mu1_a2_c2.5.txt
-
-TOTAL certified leaves=44166 wall=73.5s threads=12  OVERALL=PASS
+EDGE DEFINITE FAIL U=[3.4, 3.4] S=[-0.01, 0.01] image u=[2.96923561, 3.026042789]
+RESULT: NOT VERIFIED
+== checker B on rikitake_published_mu1_a2_c2.5.spec (logs: independent/run_b_pub_mu1_a2_c2.5.log, audit_b_pub_mu1_a2_c2.5.log)
+TOTAL leaves=44166 wall=127.4s  OVERALL=PASS
+COVERAGE AUDIT: PASS
+== checker B on rikitake_published_mu1_a3.75_c4.spec (logs: independent/run_b_pub_mu1_a3.75_c4.log, audit_b_pub_mu1_a3.75_c4.log)
+TOTAL leaves=164809 wall=404.7s  OVERALL=PASS
+COVERAGE AUDIT: PASS
+== checker B on rikitake_published_mu2_a5_c5.8.spec (logs: independent/run_b_pub_mu2_a5_c5.8.log, audit_b_pub_mu2_a5_c5.8.log)
+TOTAL leaves=323590 wall=1123.2s  OVERALL=PASS
 COVERAGE AUDIT: PASS
 == negative control, checker B (must end OVERALL=FAIL)
-TOTAL certified leaves=43264 wall=74.9s threads=12  OVERALL=FAIL
-
-real	169m37.189s
-user	203m52.528s
-sys	0m48.917s
-EXIT=0
+TOTAL leaves=43264 wall=85.2s  OVERALL=FAIL

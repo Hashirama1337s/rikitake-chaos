@@ -1,7 +1,0 @@
-N_L: leaves=194275 fails=0 inside=True strips=2389 strip_cover_exact=True first_bad_strip=None area_sum==area: True
-N_R: leaves=129049 fails=0 inside=True strips=2262 strip_cover_exact=True first_bad_strip=None area_sum==area: True
-edge_l0: leaves=8 fails=0 cover_exact=True gap=None
-edge_l1: leaves=128 fails=0 cover_exact=True gap=None
-edge_r0: leaves=128 fails=0 cover_exact=True gap=None
-edge_r1: leaves=2 fails=0 cover_exact=True gap=None
-COVERAGE AUDIT: PASS

@@ -38,10 +38,10 @@ L=[3.392402525,3.685120702] R=[3.750503112,4.758399143] w=0.003
   piece 35 u=[3.64853093,3.655848884] leaves 14634 depth 14
   piece 36 u=[3.655848884,3.663166839] leaves 16384 depth 14
   piece 37 u=[3.663166839,3.670484793] leaves 18294 depth 15
-  piece 38 u=[3.670484793,3.677802747] leaves 30918 depth 15
+  piece 38 u=[3.670484793,3.677802747] leaves 30919 depth 15
   piece 39 u=[3.677802747,3.685120702] leaves 48439 depth 16
-N_L: band |s|<w and no-flip verified; pieces 199217, max depth 16, sup|s| <= 0.002999990373
-  piece 0 u=[3.750503112,3.775700513] leaves 76638 depth 18
+N_L: band |s|<w and no-flip verified; pieces 199218, max depth 16, sup|s| <= 0.002999984301
+  piece 0 u=[3.750503112,3.775700513] leaves 76639 depth 18
   piece 1 u=[3.775700513,3.800897914] leaves 24064 depth 15
   piece 2 u=[3.800897914,3.826095315] leaves 12382 depth 14
   piece 3 u=[3.826095315,3.851292715] leaves 6024 depth 13
@@ -81,13 +81,13 @@ N_L: band |s|<w and no-flip verified; pieces 199217, max depth 16, sup|s| <= 0.0
   piece 37 u=[4.68280694,4.708004341] leaves 16 depth 4
   piece 38 u=[4.708004341,4.733201742] leaves 16 depth 4
   piece 39 u=[4.733201742,4.758399143] leaves 16 depth 4
-N_R: band |s|<w and flip verified;    pieces 330178, max depth 18, sup|s| <= 0.002999990373
+N_R: band |s|<w and flip verified;    pieces 330180, max depth 18, sup|s| <= 0.002999998278
 Q(left  edge N_L), need u < r0: u in [3.691745416, 3.737879735] : true
 Q(right edge N_L), need u > r1: u in [4.760657223, 4.943260413] : true
 Q(left  edge N_R), need u > r1: u in [4.765245521, 4.923506173] : true
 Q(right edge N_R), need u < l0: u in [3.356164041, 3.366674328] : true
 RESULT: ALL COVERING CONDITIONS VERIFIED
 
-real	99m18.242s
-user	99m16.965s
-sys	0m0.031s
+real	72m29.053s
+user	72m27.166s
+sys	0m0.013s

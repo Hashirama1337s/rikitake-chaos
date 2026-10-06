@@ -1,22 +1,51 @@
 # Checker B (written independently)
 
-Checker B was written from `SPEC.md` and `design_mu1_a2_c2.5.txt` alone, without access to checker A. It uses its
-own subdivision (bisect the longer side, multi-threaded), its own enclosure of s = Y − p(X) (intersection of a
-mean-value/Taylor form and the direct form), and an exact coverage audit (`audit_b.py`) that proves, on the exact
-doubles, that the certified pieces tile every set and edge with no gaps.
+## Independence
+Checker B was written from the mathematical specification only (`SPEC.md`, a generic format for covering relations
+of a Poincaré return map), without access to checker A. Its design choices differ from checker A's:
+- its own subdivision;
+- its own chart handling;
+- its own enclosure of s = Y − p(X), which intersects a Taylor form (Lagrange point on the hull of the expansion
+  point and the image) with the direct form;
+- an exact coverage audit (`audit_b_gen.py`), which proves on the exact doubles that the certified pieces tile every
+  set and edge with no gaps.
 
-| Run (all rows (1, 2) unless stated) | Pieces | Wall time (10–12 threads) | Result | Coverage audit |
+The three designs of this repository are written in that format in `rikitake_published_*.spec` (same chart
+polynomial and sets as `../proof/design_*.txt`).
+
+## Single-threaded by design
+CAPD is not thread-safe, so every CAPD computation runs in its own single-threaded process. `drive_b.py` starts one
+process per strip or edge, in parallel, and merges their results.
+
+## Version 1.1
+This replaces the version-1.0 checker B. That version had the same Lagrange-remainder slip as checker A (see the main
+README, "Correction") and ran CAPD in several threads of one process.
+
+## Results
+Filled in from the clean-room run (`../reproduce_full.log`); per-case logs are `run_b_pub_*.log` and
+`audit_b_pub_*.log`.
+
+| spec | pieces | wall time (6 processes) | result | coverage audit |
 |---|---|---|---|---|
-| primary (accept when \|s\| < w) | 44,166 | 1 min 44 s | PASS (`run_b.log`) | PASS (`audit_b.log`) |
-| tightened (refine until \|s\| < 0.3 w) | 644,383 | 28 min 26 s | PASS (`run_b_tight.log`) | PASS (`audit_b_tight.log`) |
-| (1, 3.75), primary | 164,809 | 4 min 53 s | PASS (`run_b_design_mu1_a3.75_c4.log`) | PASS |
-| (2, 5), primary | 323,590 | 11 min 22 s | PASS (`run_b_design_mu2_a5_c5.8.log`) | PASS |
-| negative control (r1 = 3.40) | 43,264 | 1 min 28 s | FAIL, as required (`negctrl/run_neg.log`) | FAIL |
+| rikitake_published_mu1_a2_c2.5 | 44,166 | 127 s | OVERALL=PASS | PASS |
+| rikitake_published_mu1_a3.75_c4 | 164,809 | 405 s | OVERALL=PASS | PASS |
+| rikitake_published_mu2_a5_c5.8 | 323,590 | 1,123 s | OVERALL=PASS | PASS |
+| negctrl/rikitake_NEG_r1_3.40 (r1 moved to 3.40) | 43,264 | 85 s | OVERALL=FAIL (as required) | n/a |
 
-The tightened run shows the band condition holds with margin: every image satisfies |s| ≤ 3.0e-3 against w = 0.01.
-Proven edge images (primary run): l0 → X ∈ [2.95685, 2.99457] < r0; l1 → X ∈ [3.76850, 3.93228] > r1;
-r0 → X ∈ [3.85138, 4.05378] > r1; r1 → X ∈ [2.61471, 2.63854] < l0.
+## Build and run
 
-Build: `g++ <Cflags from capd.pc> -pthread verify_b.cpp <Libs from capd.pc> -o verify_b`.
-Run: `./verify_b design_mu1_a2_c2.5.txt leaves_b.txt 12 all 1` (last argument 0.3 for the tightened run),
-then `python3 audit_b.py design_mu1_a2_c2.5.txt leaves_b.txt`.
+Build (as in `../reproduce.sh`):
+
+```
+g++ <Cflags from capd.pc> -pthread verify_b_gen.cpp <Libs from capd.pc> -o verify_b_gen
+```
+
+Run:
+
+```
+python3 drive_b.py rikitake_published_mu1_a2_c2.5.spec pub_mu1_a2_c2.5 $(nproc)
+```
+
+This writes:
+- `run_b_<tag>.log` and `audit_b_<tag>.log`;
+- `leaves_b_<tag>.txt`, the certified pieces, which are gzipped in this repository.

@@ -61,7 +61,12 @@ Img image(interval U, interval S) {
   interval X = xhI + v[0];
   if (!(X > 0)) throw runtime_error("landing sign not determined");
   Img out; out.flipped = sg < 0; out.u = X;
-  out.s = v[1] - interval(0.5) * ddpoly(X) * sqr(v[0]);     // s = Y - p(X), Lagrange remainder
+  // s = Y - p(X), enclosed two ways and intersected (both rigorous; v1.1):
+  //  (a) Taylor form: Y - p(X) = v1 - 1/2 p''(xi) v0^2, xi between xh and X (v1.1 fix: xi in hull(xh, X), not X)
+  //  (b) direct form: Y = p(xh) + p'(xh) v0 + v1, so s = Y - p(X) evaluated directly
+  interval sa = v[1] - interval(0.5) * ddpoly(intervalHull(xhI, X)) * sqr(v[0]);
+  interval sb = (ph + dh * v[0] + v[1]) - poly(X);
+  if (!intersection(sa, sb, out.s)) throw runtime_error("empty intersection (enclosure error)");
   return out;
 }
 

@@ -64,9 +64,9 @@ the choice of which direction to bisect are heuristics that can only make the ch
 
 | (mu, a) | plane z = c | N_L = [l0, l1] (≈) | N_R = [r0, r1] (≈) | w | pieces (checker A) | time, 1 core (≈) | result |
 |---|---|---|---|---|---|---|---|
-| (1, 2) | 2.5 | [2.74952, 3.01882] | [3.10618, 3.69748] | 0.01 | 60,777 | 12 min | VERIFIED |
-| (1, 3.75) | 4.0 | [3.18142, 3.46027] | [3.56336, 4.16186] | 0.01 | 222,238 | 46 min | VERIFIED |
-| (2, 5) | 5.8 | [3.39240, 3.68512] | [3.75050, 4.75840] | 0.003 | 529,395 | 102 min | VERIFIED |
+| (1, 2) | 2.5 | [2.74952, 3.01882] | [3.10618, 3.69748] | 0.01 | 62,041 | 9 min | VERIFIED |
+| (1, 3.75) | 4.0 | [3.18142, 3.46027] | [3.56336, 4.16186] | 0.01 | 352,843 | 55 min | VERIFIED |
+| (2, 5) | 5.8 | [3.39240, 3.68512] | [3.75050, 4.75840] | 0.003 | 529,398 | 72 min | VERIFIED |
 
 Proven edge images (checker A), each of which must land beyond the stated bound:
 
@@ -79,11 +79,34 @@ Proven edge images (checker A), each of which must land beyond the stated bound:
 Edge-image bounds are rounded outward to 5 decimals from the logs in `proof/`; set endpoints (≈) are rounded for display, their exact values are in `proof/design_*.txt`.
 
 Two independent programs were run on every case: **checker A** (`proof/check.cpp`) and **checker B**
-(`independent/`, written independently from the mathematical specification only, without access to checker A).
-Both verify all three cases. Checker B's pieces are additionally audited to tile each set exactly (`independent/audit_b*.log`); on (1, 2) a tightened run shows every image within |s| ≤ 0.003 of the curve against w = 0.01.
+(`independent/`, written independently from the mathematical specification `independent/SPEC.md` only, without access to
+checker A). Both verify all three cases. Checker B is a generic covering-relation verifier that reads a `.spec` file; it runs
+one single-threaded CAPD process per strip (`drive_b.py`), and its certified pieces are audited to tile each set and edge
+exactly on the exact doubles (`independent/audit_b_pub_*.log`):
+
+| (mu, a) | checker B pieces | wall time (6 cores) | result | coverage audit |
+|---|---|---|---|---|
+| (1, 2) | 44,166 | 2.1 min | PASS | PASS |
+| (1, 3.75) | 164,809 | 6.7 min | PASS | PASS |
+| (2, 5) | 323,590 | 18.7 min | PASS | PASS |
 
 Controls: CAPD's own proof of the Rössler horseshoe (Zgliczyński 1997) reproduces (`reproduce.sh` builds it from the CAPD sources), and a
-deliberately false design (one edge moved so its condition fails by a clear margin) is rejected by both checkers.
+deliberately false design (one edge moved so its condition fails by a clear margin) is rejected by both checkers
+(`proof/negctl.log`, `independent/negctrl/`).
+
+## Correction (v1.1)
+
+Version 1.0 of both checkers contained the same slip in one bound. The chart coordinate s = y − p(x) of an image point was
+enclosed with a Taylor form of p about the centre of the image's x-interval; the Lagrange remainder term was evaluated with
+p'' over the image interval X alone, where it must be evaluated over the hull of the expansion point and X. The two
+intervals coincide in all but degenerate cases, and the enclosure is correct whenever the expansion point lies in X (as it
+does here, by construction), but as written the step was not rigorous for an arbitrary expansion point. Version 1.1 fixes
+the remainder (p'' over `hull(xh, X)`) and, in addition, intersects the Taylor enclosure with a direct evaluation
+`(y − p(X))`, which is rigorous on its own; checker B was rewritten as the generic verifier above with the same fix. The
+v1.0 checker B also ran several CAPD threads in one process, which CAPD does not guarantee to be safe; v1.1 uses one process
+per strip. Every result in this README was regenerated from scratch with the corrected programs (`reproduce_full.log`);
+the covering relations, the edge images to five decimals and the conclusions are unchanged. We record the slip here
+because a computer-assisted proof is only as good as the published checker.
 
 ## Reproduce
 
@@ -94,7 +117,9 @@ bash reproduce.sh
 ```
 
 builds CAPD 6.1 at the pinned commit `03dc5628203334b214bb7d9fd63788a175521005`, compiles both checkers and runs
-every case (the complete output of our own clean run is `reproduce_full.log`, about 2 h 50 min). Each run ends with `RESULT: ALL COVERING CONDITIONS VERIFIED` or `RESULT: NOT VERIFIED`.
+every case (the complete output of our own clean-room run of v1.1 is `reproduce_full.log`, 2 h 56 min on a 6-core machine,
+CAPD build included). Each checker A run ends with `RESULT: ALL COVERING CONDITIONS VERIFIED` or `RESULT: NOT VERIFIED`;
+each checker B run ends with `OVERALL=PASS` or `OVERALL=FAIL` followed by its coverage audit.
 
 `design/` holds the (non-rigorous) Python scripts that fitted the chart and chose the sets, and the figure script.
 
@@ -109,7 +134,7 @@ here.
 ## Licence and citation
 
 Text and results CC-BY-4.0 (`LICENSE`); code MIT (`LICENSE-CODE`). CAPD is used under its own licence and is not
-redistributed. Built with AI assistance. See `CITATION.cff`; cite as Moki&Julio (2026), *Rikitake's two-disc dynamo is chaotic: a computer-assisted proof*, Zenodo, doi:10.5281/zenodo.23041182.
+redistributed. Built with AI assistance. See `CITATION.cff`; cite as Moki&Julio (2026), *Rikitake's two-disc dynamo is chaotic: a computer-assisted proof*, version 1.1, Zenodo, doi:10.5281/zenodo.23041182 (concept DOI, resolves to the latest version).
 
 ## Other work by Moki & Julio
 

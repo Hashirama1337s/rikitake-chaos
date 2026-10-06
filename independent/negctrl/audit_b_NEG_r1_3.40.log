@@ -1,0 +1,8 @@
+S0: leaves=17163 fails=0 inside=True strips=414 strip_cover_exact=True first_bad_strip=None area_sum==area: True
+S0_lo: leaves=8 fails=0 cover_exact=True gap=None
+S0_hi: leaves=64 fails=0 cover_exact=True gap=None
+S1: leaves=25947 fails=0 inside=True strips=508 strip_cover_exact=True first_bad_strip=None area_sum==area: True
+S1_lo: leaves=82 fails=0 cover_exact=True gap=None
+S1_hi: leaves=0 fails=1 cover_exact=False gap=None
+    S1_hi 0x1.b333333333333p+1 0x1.b333333333333p+1 -0x1.47ae147ae147bp-7 0x1.47ae147ae147bp-7 FAIL |s'|<w not certified; edge X<bound not certified; [definite: X>=bound]
+COVERAGE AUDIT: FAIL

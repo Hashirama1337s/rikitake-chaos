@@ -1,27 +1,32 @@
-# Independent verification spec (checker B)
+# Generic covering-relation spec (checker B)
 
-## System
-Rikitake two-disc dynamo: x' = -mu*x + y*z,  y' = -mu*y + (z - a)*x,  z' = 1 - x*y,  with mu = 1, a = 2 (exact).
+A `.spec` file describes a claimed set of covering relations for a Poincare return map of a 3-D autonomous ODE.
+Every decimal is the exact IEEE double it parses to (round-to-nearest).
 
-## Map
-Section Sigma = plane z = c, c = 2.5 (exact); crossings with z DECREASING (z - c goes from + to -).
-P = first return map to Sigma (after leaving Sigma), points written as (x, y).
-Symmetry S(x,y,z) = (-x,-y,z) maps solutions to solutions.
-Reduced map Q(x,y) = P(x,y) if P(x,y) has x > 0 ("no flip"); Q(x,y) = -P(x,y) if P(x,y) has x < 0 ("flip").
+Lines:
+1. variable names (space separated), e.g. `x y z`
+2. parameter names (space separated; may be empty)
+3. parameter values (same order)
+4. vector field components, comma separated, in CAPD formula syntax using those names (e.g. `y,z,-x+y*y-mu*z`)
+5. `k c dir n`: section Sigma = {X_k = c} (k = 0,1,2); dir = +1 means crossings with X_k increasing, -1 decreasing;
+   n = the iterate: P is the first return map to Sigma in that direction, and the map studied is P^n.
+6. `D0 D1 D2 l0 l1 l2 sym`: if sym = 1, D = diag(D0,D1,D2) is an involution commuting with the flow, and
+   Q = D^f o P^n with f in {0,1} chosen so that ell . Q > 0 where ell = (l0,l1,l2); if sym = 0, Q = P^n.
+7. `eu0 eu1 eu2 ev0 ev1 ev2`: points of Sigma are parametrised X = origin + u*eu + v*ev, origin = c*e_k
+   (eu, ev lie in the plane; they need not be exactly orthonormal: (u,v) of a point of Sigma is obtained by solving
+   this 2x2 linear system).
+8. `xmid xsc m C[0] ... C[m-1]`: polynomial p(u) = sum_j C[j] t^(m-1-j), t = (u - xmid)/xsc (Horner order).
+9. `w nsets`, followed by nsets lines `lo hi orient Tlo Thi fold`.
 
-## Chart
-p(u) = sum_{k=0}^{8} C[k] * t^(8-k), t = (u - XMID)/XSC  (Horner order, C[0] is the leading coefficient).
-Chart: (u, s) = (x, y - p(x)). Numbers are in design_mu1_a2_c2.5.txt:
-  line 1: mu a c XMID XSC ; line 2: 9 C[0..8] ; line 3: l0 l1 r0 r1 w
-Treat every decimal in that file as the exact IEEE double it parses to.
+Chart: (u, s) with s = v - p(u). Set i is N_i = {lo <= u <= hi, |s| <= w} (the true curved set on Sigma).
 
-## Sets (in chart coordinates)
-N_L = [l0,l1] x [-w,w],  N_R = [r0,r1] x [-w,w]; the actual sets are {(u, p(u)+s)} on Sigma.
+Claims to verify rigorously for every set i:
+1. Q is defined on all of N_i (every point returns transversally n times); if sym = 1 the fold f is the same value
+   `fold` on all of N_i and ell . Q > 0 there.
+2. |s(Q(x))| < w for every x in N_i.
+3. orient = +1: u(Q(x)) < Tlo on the edge u = lo and u(Q(x)) > Thi on the edge u = hi;
+   orient = -1: u(Q(x)) > Thi on the edge u = lo and u(Q(x)) < Tlo on the edge u = hi   (edges include all |s| <= w).
+Report PASS/FAIL per set and per claim, the rigorous bounds (sup |s| of images, edge image u-ranges), pieces and time.
 
-## Claims to verify RIGOROUSLY (interval arithmetic / validated ODE integration; CAPD is installed in WSL at ~/capd_src,
-## build flags in ~/capd_src/build/bin/capd.pc: use the Cflags and Libs lines)
-1. Q is defined on all of N_L and N_R (every point returns transversally), N_L never flips, N_R always flips.
-2. For every point of N_L and of N_R, the image Q(point) = (X, Y) satisfies |Y - p(X)| < w.
-3. Edges: image of {l0} x [-w,w] has X < r0 ;  image of {l1} x [-w,w] has X > r1 ;
-          image of {r0} x [-w,w] has X > r1 ;  image of {r1} x [-w,w] has X < l0.
-Report PASS/FAIL for each of the 3 claims (and each edge), with the rigorous bounds you obtained, and wall time.
+In this repository: rikitake_published_*.spec are the three designs of proof/design_*.txt written in this format (same
+chart polynomial and sets); negctrl/rikitake_NEG_r1_3.40.spec is the negative control (r1 moved to 3.40).

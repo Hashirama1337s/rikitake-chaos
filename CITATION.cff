@@ -18,7 +18,11 @@ keywords:
   - computer-assisted proof
   - interval arithmetic
   - CAPD
+  - geodynamo
+  - nonlinear dynamics
 abstract: >-
+  A planet's magnetic field can flip, north becoming south. In 1958 Tsuneji Rikitake proposed the simplest
+  mechanical model of such flipping: two spinning copper discs, each driving current through the other's coil.
   The Rikitake two-disc dynamo (1958), the classic minimal model of geomagnetic polarity reversals, has been called
   chaotic since Ito's 1980 numerical study but its chaos had not been proved. For three parameter values we prove, with
   rigorous interval-arithmetic Poincare maps (CAPD), covering relations for the symmetry-reduced return map to a plane

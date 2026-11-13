@@ -18,13 +18,13 @@ Since Ito's numerical study of 1980 the model has been called chaotic, and it is
 hundreds of papers. Its relatives have been proved chaotic: the Lorenz equations, and the Rössler equations (in 1997),
 among others. As far as we could find, Rikitake's dynamo never was. This repository proves it for three parameter settings.
 
-A picture that helps: **kneading dough.** A baker stretches the dough long, lays it back across itself and stretches
+![](brand/icon-picture.svg) **The idea in one picture.** **Kneading dough.** A baker stretches the dough long, lays it back across itself and stretches
 it again. Crumbs that start side by side can be sent along completely different routes. Here the "dough" is the set of possible states of the dynamo, and one
 loop of its motion does the stretching. We picked two small, thin boxes of states: one whose next loop brings **no**
 reversal, one whose next loop **does** reverse. We proved that one loop stretches each box right across the boxes it
 leads to, overhanging both ends; the "reverse" box is stretched across both.
 
-Once every link is proved, any route through the links is followed by a real motion. Where the picture breaks: a baker
+Once every link is proved, any route through the links is followed by a real motion. **Where the picture breaks.** A baker
 mixes all the dough, but we prove the stretching only for these two thin boxes. The theorem says nothing about most
 starting points, or about what a typical simulation settles into. It also says nothing about how fast nearby states separate (no Lyapunov exponents).
 
@@ -82,12 +82,7 @@ flipped on the way.
 
 The route map has two boxes: N_L (the next loop does **not** reverse) and N_R (the next loop **does**).
 
-```mermaid
-flowchart LR
-  L((N_L<br/>no reversal)) --> R((N_R<br/>reversal))
-  R --> L
-  R --> R
-```
+![Route map of the Rikitake proof: two boxes and the three proved links between them](brand/hero-rikitake-route-map.svg)
 
 There is no arrow from N_L to itself. So the theorem reads: for **any** endless sequence of "reverse / don't reverse"
 with no two "don't" in a row, there is an exact solution of the equations whose loops follow that sequence. Repeating

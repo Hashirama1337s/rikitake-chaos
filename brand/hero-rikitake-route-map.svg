@@ -1,27 +1,27 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="860" height="280" viewBox="0 0 860 280" font-family="Segoe UI, Helvetica, Arial, sans-serif" role="img" aria-label="Route map of the Rikitake proof: two boxes and the three proved links between them">
 <title>Route map of the Rikitake proof: two boxes and the three proved links between them</title>
-<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#3a3fa8"/></marker></defs>
-<rect width="860" height="280" rx="10" fill="#ffffff" stroke="#d9dbe8"/>
-<text x="20" y="34" font-size="18" font-weight="600" fill="#18192b">The route map: 2 boxes, 3 proved links</text>
-<text x="20" y="54" font-size="12" fill="#555b74">An arrow means: one loop of the dynamo stretches the first box right across the second (proved, at three parameter settings).</text>
-<g fill="none" stroke="#3a3fa8" stroke-width="2" marker-end="url(#a)">
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#39ff14"/></marker></defs>
+<rect width="860" height="280" rx="10" fill="#1c2026" stroke="#2f353d"/>
+<text x="20" y="34" font-size="18" font-weight="600" fill="#e8edf2">The route map: 2 boxes, 3 proved links</text>
+<text x="20" y="54" font-size="12" fill="#9aa4ae">An arrow means: one loop of the dynamo stretches the first box right across the second (proved, at three parameter settings).</text>
+<g fill="none" stroke="#39ff14" stroke-width="2" marker-end="url(#a)">
 <path d="M222,130 C270,106 330,106 378,130"/><path d="M378,158 C330,182 270,182 222,158"/>
 <path d="M470,118 C470,62 560,100 502,138"/>
 </g>
-<g font-size="15" font-weight="600" fill="#18192b" text-anchor="middle">
-<rect x="80" y="120" width="140" height="48" rx="8" fill="#eef0fa"/><text x="150" y="150">N_L</text>
-<rect x="380" y="120" width="120" height="48" rx="8" fill="#eef0fa" stroke="#3a3fa8"/><text x="440" y="150">N_R</text>
+<g font-size="15" font-weight="600" fill="#e8edf2" text-anchor="middle">
+<rect x="80" y="120" width="140" height="48" rx="8" fill="#262b31"/><text x="150" y="150">N_L</text>
+<rect x="380" y="120" width="120" height="48" rx="8" fill="#262b31" stroke="#39ff14"/><text x="440" y="150">N_R</text>
 </g>
-<text x="150" y="190" font-size="11.5" fill="#555b74" text-anchor="middle">next loop: no reversal</text>
-<text x="440" y="190" font-size="11.5" fill="#555b74" text-anchor="middle">next loop: the field reverses</text>
-<g font-size="12.5" fill="#18192b">
-<rect x="590" y="78" width="250" height="150" rx="8" fill="#ffffff" stroke="#d9dbe8"/>
+<text x="150" y="190" font-size="11.5" fill="#9aa4ae" text-anchor="middle">next loop: no reversal</text>
+<text x="440" y="190" font-size="11.5" fill="#9aa4ae" text-anchor="middle">next loop: the field reverses</text>
+<g font-size="12.5" fill="#e8edf2">
+<rect x="590" y="78" width="250" height="150" rx="8" fill="#1c2026" stroke="#2f353d"/>
 <text x="606" y="104" font-weight="600">What the proof gives</text>
-<text x="606" y="126" fill="#555b74">Every reversal pattern with no two</text>
-<text x="606" y="143" fill="#555b74">no-reversal loops in a row is</text>
-<text x="606" y="160" fill="#555b74">followed by a real motion.</text>
+<text x="606" y="126" fill="#9aa4ae">Every reversal pattern with no two</text>
+<text x="606" y="143" fill="#9aa4ae">no-reversal loops in a row is</text>
+<text x="606" y="160" fill="#9aa4ae">followed by a real motion.</text>
 <text x="606" y="188" font-weight="600">What it does not give</text>
-<text x="606" y="210" fill="#555b74">Anything about most starting points.</text>
+<text x="606" y="210" fill="#9aa4ae">Anything about most starting points.</text>
 </g>
-<text x="20" y="262" font-size="11" fill="#555b74">Schematic of the link structure only; box definitions are in proof/design_*.txt. Moki &amp; Julio.</text>
+<text x="20" y="262" font-size="11" fill="#9aa4ae">Schematic of the link structure only; box definitions are in proof/design_*.txt. Moki &amp; Julio.</text>
 </svg>

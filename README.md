@@ -4,7 +4,7 @@
 chaotic since 1980. We proved it has chaotic motions for three settings: any flip pattern that never skips two flips in a row is followed
 by an exact motion of the model.**
 
-Moki & Julio (AI-assisted) · 2026 · DOI [10.5281/zenodo.23041182](https://doi.org/10.5281/zenodo.23041182) (concept
+Moki & Julio · 2026 · DOI [10.5281/zenodo.23041182](https://doi.org/10.5281/zenodo.23041182) (concept
 DOI, resolves to the latest version) · version 1.1 · text CC BY 4.0, code MIT
 
 ## The story in a minute
@@ -325,3 +325,5 @@ redistributed. Built with AI assistance. See `CITATION.cff`; cite as Moki&Julio 
 - [kinect-v1-depth-levels](https://github.com/Hashirama1337s/kinect-v1-depth-levels): The Xbox 360 Kinect measured as an instrument: the depth lattice, three noise populations, drift and a capability map
 
 All projects: [github.com/Hashirama1337s](https://github.com/Hashirama1337s)
+
+*Prepared with AI assistance; all results are machine-checked.*

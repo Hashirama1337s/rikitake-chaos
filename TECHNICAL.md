@@ -19,6 +19,10 @@ been: the Lorenz equations (Galias–Zgliczyński, Mischaikow–Mrozek, Tucker),
 
 ![return map and reversals](figure.png)
 
+![Return map of the Rikitake dynamo with the two shaded proof boxes and four green bars showing where the box edges are proved to land](figures/rikitake-return-map-proof.svg)
+
+*Each dot compares the dynamo's state at one pass through the plane z = 2.5 with the next pass (mu = 1, a = 2; simulation, not proved). Blue: the next loop keeps the polarity; orange: it reverses it. Shaded: the proof boxes N_L and N_R. Green bars: where the boxes' edges are proved to land after one loop, every rounding error counted. N_L is stretched right across N_R, and N_R across both boxes, so every flip pattern with no two "keep" loops in a row is followed by a true motion.*
+
 ## Theorem
 
 Let (mu, a) be one of **(1, 2)**, **(1, 3.75)** or **(2, 5)**. [^params] Let Q be the first-return map of the
@@ -78,6 +82,10 @@ Proven edge images (checker A), each of which must land beyond the stated bound:
 
 Edge-image bounds are rounded outward to 5 decimals from the logs in `proof/`; set endpoints (≈) are rounded for display, their exact values are in `proof/design_*.txt`.
 
+![Three return-map panels, one per proved setting, each with two shaded boxes and four green landing bars](figures/rikitake-three-settings.svg)
+
+*The same two-box proof at all three settings, (mu, a) = (1, 2), (1, 3.75) and (2, 5); dots are a simulation, not proved. In every panel the proved landing ranges (green) clear the boxes on the required side.*
+
 Two independent programs were run on every case: **checker A** (`proof/check.cpp`) and **checker B**
 (`independent/`, written independently from the mathematical specification `independent/SPEC.md` only, without access to
 checker A). Both verify all three cases. Checker B is a generic covering-relation verifier that reads a `.spec` file; it runs
@@ -134,4 +142,4 @@ here.
 ## Licence and citation
 
 Text and results CC-BY-4.0 (`LICENSE`); code MIT (`LICENSE-CODE`). CAPD is used under its own licence and is not
-redistributed. See `CITATION.cff`; cite as Moki & Julio (2026), *Rikitake's two-disc dynamo is chaotic: a computer-assisted proof*, version 1.1, Zenodo, doi:10.5281/zenodo.23041182 (concept DOI, resolves to the latest version).
+redistributed. See `CITATION.cff`; cite as Moki & Julio (2026), *Rikitake's two-disc dynamo is chaotic: a computer-assisted proof*, version 1.1.1, Zenodo, doi:10.5281/zenodo.23041182 (concept DOI, resolves to the latest version).

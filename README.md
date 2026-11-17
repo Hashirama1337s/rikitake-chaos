@@ -4,7 +4,7 @@
 
 [![DOI 10.5281/zenodo.23041182](brand/doi.svg)](https://doi.org/10.5281/zenodo.23041182) ![Licence: text and data CC BY 4.0, code MIT](brand/licence.svg) [![Moki & Julio lab map](brand/lab.svg)](https://github.com/Hashirama1337s)
 
-Moki & Julio · 2026 · version 1.1
+Moki & Julio · 2026 · version 1.1.1
 
 **Read** [TECHNICAL.md](TECHNICAL.md) · **Re-run** `bash reproduce.sh` · **Check** [independent/SPEC.md](independent/SPEC.md)
 
@@ -13,6 +13,10 @@ Moki & Julio · 2026 · version 1.1
 A planet's magnetic field can flip, north becoming south. In 1958 Tsuneji Rikitake proposed the simplest mechanical
 model of such flipping: two spinning copper discs, each driving current through the other's coil. Three
 equations describe it, and in simulations its polarity reverses at irregular, apparently random moments.
+
+![The current in the first disc over time, switching sign at irregular moments](figures/rikitake-polarity-flips.svg)
+
+*The current x in the first disc (mu = 1, a = 2; a simulation, not proved). Its sign is the field's polarity, so each crossing of the zero line is a reversal, and the reversals come at irregular moments. The theorem proves that motions with chaotic flip patterns exist, not that this simulated run is one of them.*
 
 Since Ito's numerical study of 1980 the model has been called chaotic, and it is used as a stock chaotic system in
 hundreds of papers. Its relatives have been proved chaotic: the Lorenz equations, and the Rössler equations (in 1997),
@@ -54,7 +58,9 @@ in one process per strip (see [TECHNICAL.md](TECHNICAL.md)); the results did not
   in one process, which CAPD does not guarantee to be safe; v1.1 uses one process per strip. Both fixed in v1.1; every
   result regenerated, nothing changed. Details: [TECHNICAL.md](TECHNICAL.md).
 
-![Rikitake return map and polarity reversals](figure.png)
+![Return map of the Rikitake dynamo with the two shaded proof boxes and four green bars showing where the box edges are proved to land](figures/rikitake-return-map-proof.svg)
+
+*Each dot compares the dynamo's state at one pass through the plane z = 2.5 with the next pass (mu = 1, a = 2; simulation, not proved). Blue: the next loop keeps the polarity; orange: it reverses it. Shaded: the proof boxes N_L and N_R. Green bars: where the boxes' edges are proved to land after one loop, every rounding error counted. N_L is stretched right across N_R, and N_R across both boxes, so every flip pattern with no two "keep" loops in a row is followed by a true motion.*
 
 Full technical record: [TECHNICAL.md](TECHNICAL.md).
 
@@ -109,6 +115,10 @@ w = 0.01. Checker A proved where the edges of N_L land after one loop:
 So the image of N_L reaches past both ends of N_R: N_L ⇒ N_R. The edges of N_R land above 3.69748 and below 2.74952, so
 its image reaches across both boxes. Each check also needs the image to stay within |s| < w, and every loop to cross the
 plane cleanly with the stated polarity outcome.
+
+![Three return-map panels, one per proved setting, each with two shaded boxes and four green landing bars](figures/rikitake-three-settings.svg)
+
+*The same two-box proof at all three settings, (mu, a) = (1, 2), (1, 3.75) and (2, 5); dots are a simulation, not proved. In every panel the proved landing ranges (green) clear the boxes on the required side.*
 
 **How fast the patterns multiply.** Count the allowed patterns of three loops: of the 8 strings of R and N, five have no
 "NN" (RRR, RRN, RNR, NRR, NRN). The counts follow the Fibonacci numbers, growing by the golden ratio (1+√5)/2 per loop.
@@ -175,14 +185,41 @@ section and boxes, and run `drive_b.py` on it. Finding good boxes is the hard, n
 - **Negative control** - a deliberately broken input that the checker must reject.
 - **CAPD** - a C++ library for rigorous computation with differential equations.
 
+## Open doors
+
+What this work leaves open, and what we noticed along the way but did not follow up, for anyone who wants to take the next step.
+
+- **The chaos you see versus the chaos we proved.** In simulations, the dynamo's snapshots lie along one thin curve,
+  and polarity flips at irregular moments. The proof covers only two short stretches of that curve. Whether the motion
+  a simulation settles into contains, or equals, the proved chaotic set is not known from this work. *Status:*
+  UNTESTED observation from this work (not attempted here). *Start here:* the return-map figure (`figure.png`, made by
+  `design/make_figure.py`) and the two proved boxes in `proof/design_*.txt`. *Ceiling:* a statement about the attractor
+  itself rather than about a set inside it, for one of the classic chaotic models.
+- **From three points to whole regions.** The proof holds at three settings of (mu, a). The third setting, (2, 5),
+  needed boxes more than three times thinner (w = 0.003 instead of 0.01) and more than eight times as many checked
+  pieces as the first. How the effort grows across the (mu, a) plane, and where this two-box route stops working, was
+  not mapped. *Status:* UNTESTED observation from this work (not attempted here). *Start here:* `design/scout_plane.py`
+  and `design/explore.py` (numerical scouting at any (mu, a)), `design/design2.py` (box design), and the results table in
+  [TECHNICAL.md](TECHNICAL.md). *Ceiling:* a map of where this route proves chaos, and a proof that covers a
+  continuous range of parameters instead of single points.
+- **A ruler that bends.** Both checkers measure points by their height above one fixed polynomial curve (a chart,
+  s = y - p(x)). That only works while the snapshot curve is the graph of a function along one line; a curve with a sharp
+  tip, or one that folds back on itself, cannot be followed this way. A curved or piecewise chart was not built.
+  *Status:* UNTESTED observation from this work (not attempted here). *Start here:* the generic checker in
+  `independent/` (`verify_b_gen.cpp`, `drive_b.py`, the `.spec` format in [independent/SPEC.md](independent/SPEC.md)).
+  *Ceiling:* a reusable checker that reaches systems whose return maps fold, not only those that look like a graph over
+  a line.
+
 ## How to cite
 
 ```
-Moki & Julio (2026). Rikitake's two-disc dynamo is chaotic - a computer-assisted proof. Version 1.1. Zenodo. https://doi.org/10.5281/zenodo.23041182
+Moki & Julio (2026). Rikitake's two-disc dynamo is chaotic - a computer-assisted proof. Version 1.1.1. Zenodo. https://doi.org/10.5281/zenodo.23041182
 ```
 
 The DOI always resolves to the newest archived version. Machine-readable: [CITATION.cff](CITATION.cff).
 Text and results CC-BY-4.0 (`LICENSE`); code MIT (`LICENSE-CODE`). CAPD is used under its own licence and is not redistributed.
+
+Release note - v1.1.1: adds Open doors and figures; no change to the certified results.
 
 ## Related projects
 
